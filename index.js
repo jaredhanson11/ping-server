@@ -28,7 +28,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/healthz", (req, res) => {
-  reqs++;
   res.end();
 });
 
