@@ -27,6 +27,10 @@ app.get("/", (req, res) => {
   res.end();
 });
 
+app.get("/current", (req, res) => {
+  res.json({ current: reqs });
+});
+
 app.get("/healthz", (req, res) => {
   res.end();
 });
