@@ -24,7 +24,13 @@ setInterval(
 
 app.get("/", (req, res) => {
   reqs++;
-  res.end();
+  if (req.query.sleep) {
+    setTimeout(() => {
+      res.end();
+    }, parseInt(req.query.sleep) * 1000);
+  } else {
+    res.end();
+  }
 });
 
 app.get("/current", (req, res) => {
